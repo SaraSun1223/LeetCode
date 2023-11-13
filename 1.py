@@ -14,9 +14,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
 
 
 # 2 哈希表
@@ -36,6 +36,6 @@ class Solution:
             # Python 内置函数 Python 内置函数
             # enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
             if target - num in hashtable:
-                return [hashtable[target-num],i]
-            hashtable[nums[i]]=i
+                return [hashtable[target - num], i]
+            hashtable[nums[i]] = i
         return []

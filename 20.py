@@ -12,9 +12,9 @@ class Solution:
             return False
 
         pairs = {
-            ")":"(",
-            "]":"[",
-            "}":"{",
+            ")": "(",
+            "]": "[",
+            "}": "{",
         }
         stack = list()
         for ch in s:
@@ -25,5 +25,3 @@ class Solution:
             else:
                 stack.append(ch)
         return not stack
-
-
