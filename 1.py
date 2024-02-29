@@ -39,3 +39,15 @@ class Solution:
                 return [hashtable[target - num], i]
             hashtable[nums[i]] = i
         return []
+
+
+# 最终idea
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        map = dict()
+        k = len(nums)
+        for i in range(0, k):
+            diff = target - nums[i]
+            if diff in map :
+                return [map[diff], i]
+            map[nums[i]] = i
